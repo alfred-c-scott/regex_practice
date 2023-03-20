@@ -34,6 +34,11 @@ cat
 mat
 fat
 bat
+
+https://www.google.com
+http://coreyms.com
+https://youtube.com
+https://www.nasa.gov
 '''
 
 sentence = 'Start a sentence and then bring it to an end'
@@ -78,15 +83,15 @@ sentence = 'Start a sentence and then bring it to an end'
 # for match in matches:
 #     print(match)
 #
-# phone_pattern_2 = re.compile(r'\d{3}.\d{3}.\d{4}')
-# matches = phone_pattern_2.finditer(str_0)
-# for match in matches:
-#     print(match)
+phone_pattern_2 = re.compile(r'\d{3}.\d{3}.\d{4}')
+matches = phone_pattern_2.finditer(str_0)
+for match in matches:
+    print(match)
 #
-# title_pattern = re.compile(r'M(r|s|rs)\.?\s[A-Z]\w*')
-# matches = title_pattern.finditer(str_0)
-# for match in matches:
-#     print(match)
+title_pattern = re.compile(r'M(r|s|rs)\.?\s[A-Z]\w*')
+matches = title_pattern.finditer(str_0)
+for match in matches:
+    print(match)
 #
 # pattern = re.compile(r'\d\d\d[-.]\d\d\d[-.]\d\d\d')
 #
@@ -97,9 +102,13 @@ sentence = 'Start a sentence and then bring it to an end'
 #     for match in matches:
 #         print(match)
 
-email_pattern = re.compile(r'[a-zA-Z0-9_+.-]+@[a-zA-Z-]+\.(com|net|edu)')
-matches = email_pattern.finditer(str_0)
-for match in matches:
-    print(match.group())
-    print(match.start())
-    print(match.end())
+# pattern = re.compile(r'https?://(www\.)?(\w+)(\.com|\.gov)')
+# matches = pattern.finditer(str_0)
+# for match in matches:
+#     print(match.group(0))
+#     print(match.group(1))
+#     print(match.group(2))
+#     print(match.group(3))
+
+# subbed_urls = pattern.sub(r'\2\3', str_0)
+# print(subbed_urls)
